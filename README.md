@@ -38,8 +38,14 @@ app4doc/
 ├─ llm_response.py # Interaction avec LLaMA
 ├─ server.py # API Flask
 ├─ neo4j_import/ # CSV et scripts pour import Neo4j
-├─ assets/ # Images, diagrammes, captures d'écran
+│ ├─ diseases.csv
+│ ├─ precautions.csv
+│ ├─ disease_symptom.csv
+│ ├─ disease_precaution.csv
 └─ README.md
+└─ neo4j_setup.cypher # Script d'import Neo4j
+├─ neo4j_graph.png
+└─ n8n_flow.png
 
 
 ---

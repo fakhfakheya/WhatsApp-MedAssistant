@@ -30,3 +30,24 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 
 ## 📁 Structure du projet
 
+app4doc/
+├─ chatbot_module.py # Logique principale du chatbot
+├─ conversation_memory.py # Gestion du contexte et historique
+├─ handle_symptoms.py # Extraction et recherche des symptômes
+├─ handle_precautions.py # Recherche des précautions pour chaque maladie
+├─ llm_response.py # Interaction avec LLaMA
+├─ server.py # API Flask
+├─ neo4j_import/ # CSV et scripts pour import Neo4j
+├─ assets/ # Images, diagrammes, captures d'écran
+└─ README.md
+
+
+---
+
+## ⚡ Installation
+
+1. Cloner le dépôt :
+```bash
+git clone https://github.com/fakhfakheya/WhatsApp-MedAssistant.git
+cd WhatsApp-MedAssistant
+

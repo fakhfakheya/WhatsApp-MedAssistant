@@ -43,8 +43,14 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 
 ### 🔹 Diagrammes et images
 
+**Graph Neo4j** – Ce graphe montre la structure des nœuds et relations entre maladies, symptômes et précautions.  
 ![Graph Neo4j](./neo4j_graph.png)  
+
+**Flow n8n** – Diagramme illustrant le workflow n8n : Webhook, HTTP Request, Set/Edit Fields, et envoi via Twilio WhatsApp.  
 ![Flow n8n](./n8n_flow.png)
+
+---
+
 ## ⚡ Installation
 
 ### 1️⃣ Cloner le dépôt
@@ -52,7 +58,3 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 ```bash
 git clone https://github.com/fakhfakheya/WhatsApp-MedAssistant.git
 cd WhatsApp-MedAssistant
-
----
-
-

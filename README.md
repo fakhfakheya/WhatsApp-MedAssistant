@@ -38,10 +38,6 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 * **server.py** : API Flask pour recevoir les messages et renvoyer la réponse du chatbot.  
 * **README.md** : Documentation complète du projet.
 
-### 🔹 Images et diagrammes
-```markdown
-![Graph Neo4j](./neo4j_graph.png)
-![Workflow n8n](./n8n_flow.png)
 
 ## ⚡ Installation
 

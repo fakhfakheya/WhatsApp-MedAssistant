@@ -6,7 +6,7 @@ from handle_precautions import process_precaution_query
 # --- Connexion Neo4j ---
 uri = "neo4j://127.0.0.1:7687"
 user = "neo4j"
-password = "Sami.Eyya123456"
+password = "****"
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
 # --- Historique des conversations ---

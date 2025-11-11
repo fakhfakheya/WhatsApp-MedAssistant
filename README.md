@@ -50,8 +50,18 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 ![Flow n8n](./n8n_flow.png)
 
 ---
+### 2️⃣ Configurer Twilio et le workflow n8n
 
-## ⚡ Installation
+Le projet utilise **n8n** pour orchestrer l’automatisation complète de la réception, du traitement et de l’envoi de messages WhatsApp via **Twilio**.
+
+#### Composants n8n utilisés
+
+| Composant                     | Rôle |
+|--------------------------------|------|
+| Webhook                        | Point d’entrée pour recevoir les messages WhatsApp de Twilio |
+| HTTP Request                   | Appel à l’API Flask (/chat) pour envoyer le texte utilisateur et recevoir la réponse générée par le chatbot |
+| Set / Edit Fields              | Préparer et formater les données reçues ou à envoyer |
+| Twilio – Send SMS / MMS / WhatsApp | Envoyer la réponse automatiquement au patient via WhatsApp |
 
 ### 1️⃣ Cloner le dépôt
 

@@ -28,75 +28,24 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 
 ---
 
-### 🔹 Description des dossiers et fichiers
+## 🔹 Structure des dossiers et fichiers
 
-* **chatbot_module.py** : Contient la logique principale du chatbot, appels aux fonctions de traitement.  
-* **conversation_memory.py** : Stocke l’historique des conversations pour chaque utilisateur.  
-* **handle_symptoms.py** : Extraction et normalisation des symptômes, recherche des maladies associées.  
-* **handle_precautions.py** : Recherche des précautions liées aux maladies.  
-* **llm_response.py** : Interaction avec le modèle LLaMA pour générer les réponses naturelles.  
-* **server.py** : API Flask pour recevoir les messages et renvoyer la réponse du chatbot.  
-* **README.md** : Documentation complète du projet.
-
-
-## ⚡ Installation
-
-1. Cloner le dépôt :
-```bash
-git clone https://github.com/fakhfakheya/WhatsApp-MedAssistant.git
-cd WhatsApp-MedAssistant
-## 🔹 Workflow n8n & Intégration Twilio
-
-Le projet utilise **n8n** pour orchestrer l’automatisation complète de la réception, du traitement et de l’envoi de messages WhatsApp via **Twilio**.
-
-### 1️⃣ Composants n8n utilisés
-
-| Composant                     | Rôle |
-|--------------------------------|------|
-| Webhook                        | Point d’entrée pour recevoir les messages WhatsApp de Twilio |
-| HTTP Request                   | Appel à l’API Flask (/chat) pour envoyer le texte utilisateur et recevoir la réponse générée par le chatbot |
-| Set / Edit Fields              | Préparer et formater les données reçues ou à envoyer |
-| Twilio – Send SMS / MMS / WhatsApp | Envoyer la réponse automatiquement au patient via WhatsApp |
+* **chatbot_module.py** : Logique principale du chatbot  
+* **conversation_memory.py** : Historique des conversations pour chaque utilisateur  
+* **handle_symptoms.py** : Extraction et normalisation des symptômes, recherche des maladies  
+* **handle_precautions.py** : Recherche des précautions associées aux maladies  
+* **llm_response.py** : Interaction avec LLaMA pour générer les réponses  
+* **server.py** : API Flask pour réception et envoi des messages  
+* **neo4j_import/** : CSV et script `neo4j_setup.cypher` pour Neo4j  
+* **assets/** : Images, diagrammes et captures d’écran  
+* **README.md** : Documentation complète  
 
 ---
 
-### 2️⃣ Exemple de flow n8n
+## ⚡ Installation
 
-**Webhook**
+### 1️⃣ Cloner le dépôt
 
-```text
-Type : POST
-URL exposée : https://<votre_n8n_instance>/webhook/whatsapp
-Payload attendu :
-{
-  "From": "<numéro>",
-  "Body": "<message_utilisateur>"
-}
-HTTP Request
-
-text
-Copier le code
-Méthode : POST
-URL : http://localhost:5000/chat
-Body :
-{
-  "user_text": {{$json["Body"]}},
-  "from": {{$json["From"]}}
-}
-Set / Edit Fields
-
-json
-Copier le code
-{
-  "To": "{{$json['From']}}",
-  "Body": "{{$json['reply']}}"
-}
-Twilio – Send WhatsApp
-
-text
-Copier le code
-From : numéro Twilio Sandbox (ex. whatsapp:+14155238886)
-To : numéro du patient
-Body : réponse du chatbot
-
-
+```bash
+git clone https://github.com/fakhfakheya/WhatsApp-MedAssistant.git
+cd WhatsApp-MedAssistant

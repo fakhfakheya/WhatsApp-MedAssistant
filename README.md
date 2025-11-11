@@ -36,12 +36,15 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 * **handle_precautions.py** : Recherche des précautions associées aux maladies  
 * **llm_response.py** : Interaction avec LLaMA pour générer les réponses  
 * **server.py** : API Flask pour réception et envoi des messages  
-* **neo4j_import/** : CSV et script `neo4j_setup.cypher` pour Neo4j  
-* **assets/** : Images, diagrammes et captures d’écran  
+* **neo4j_setup.cypher** : pour Neo4j  
 * **README.md** : Documentation complète  
 
 ---
 
+### 🔹 Diagrammes et images
+
+![Graph Neo4j](./neo4j_graph.png)  
+![Flow n8n](./n8n_flow.png)
 ## ⚡ Installation
 
 ### 1️⃣ Cloner le dépôt
@@ -49,3 +52,7 @@ Un assistant médical automatisé capable de comprendre les messages des patient
 ```bash
 git clone https://github.com/fakhfakheya/WhatsApp-MedAssistant.git
 cd WhatsApp-MedAssistant
+
+---
+
+
